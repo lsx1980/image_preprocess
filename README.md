@@ -17,5 +17,6 @@ argument:
 ("-p", "--path", required = True,    help = "path to image file")
 ("-ft", "--filetype", required = True,    help = "Image filetype")
 
+singularity build --writable image_preprocess.img Singularity
 
 """
