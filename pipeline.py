@@ -28,7 +28,7 @@ import argparse
 def execute_script(cmd_line):
     """execute script inside program"""
     try:
-        print(cmd_line)
+        #print(cmd_line)
         #os.system(cmd_line)
         
         process = subprocess.Popen(cmd_line, shell = True, stdout = subprocess.PIPE)
