@@ -18,5 +18,5 @@ argument:
 ("-ft", "--filetype", required = True,    help = "Image filetype")
 
 singularity build --writable image_preprocess.img Singularity
-
+singularity exec image_preprocess.img python /opt/code/pipeline.py -p /path_to_image_folder/ -ft jpg
 """
