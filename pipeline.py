@@ -23,7 +23,7 @@ argument:
 import subprocess, os
 import sys
 import argparse
-import glob
+#import glob
 
 def execute_script(cmd_line):
     """execute script inside program"""
@@ -81,11 +81,11 @@ if __name__ == '__main__':
     ext = args['filetype']
 
     # accquire image file list
-    filetype = '*.' + ext
+    #filetype = '*.' + ext
     #image_file_path = file_path + filetype
 
     #accquire image file list
-    imgList = sorted(glob.glob(file_path + filetype))
+    #imgList = sorted(glob.glob(file_path + filetype))
 
     #print((imgList))
 
