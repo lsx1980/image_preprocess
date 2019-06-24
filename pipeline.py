@@ -55,15 +55,15 @@ def image_prepocess(current_path):
     execute_script(ROI_seg)
     
     #change the path to parent folder
-    parent_path = os.path.abspath(os.path.join(current_path, os.pardir))
+    #parent_path = os.path.abspath(os.path.join(current_path, os.pardir))
     #mkpath = parent_path + '/' + str('segmented')
     
     # step2 : gamma_correction 
-    gamma_correction = "python /opt/code/gamma_correction.py -p " + parent_path + "/segmented/" 
+    #gamma_correction = "python /opt/code/gamma_correction.py -p " + parent_path + "/segmented/" 
     
-    print("Luminance enhancement by gamma_correction method...\n")
+    #print("Luminance enhancement by gamma_correction method...\n")
     
-    execute_script(gamma_correction)
+    #execute_script(gamma_correction)
     
 
 
