@@ -28,7 +28,7 @@ import argparse
 def execute_script(cmd_line):
     """execute script inside program"""
 
-     process = subprocess.run(cmd_line, shell = True, stdout = subprocess.PIPE)
+     process = subprocess.run(cmd_line, shell = True, capture_output=True)
 
 
 def image_prepocess(current_path):
