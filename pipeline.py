@@ -46,7 +46,7 @@ def image_prepocess(current_path):
     #/opt/code/bbox_seg.py -p /home/suxingliu/frame-interpolation/test-image/ -ft jpg
     
     # step1 : Region of Interest extraction
-    ROI_seg = "python /opt/code/bbox_seg.py -p " + current_path + "/" + " -ft " + str(ext)
+    ROI_seg = "python /opt/code/bbox_seg.py -p " + current_path + " -ft " + str(ext)
     
     print("Extracting Region of Interest from input images...\n")
     
