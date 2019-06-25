@@ -57,7 +57,7 @@ def image_prepocess(current_path):
     #mkpath = parent_path + '/' + str('segmented')
     
     # step2 : gamma_correction 
-    gamma_correction = "python /opt/code/gamma_correction.py -p " + current_path + "/segmented/" 
+    gamma_correction = "python /opt/code/gamma_correction.py -p " + current_path + "segmented/" 
     
     print("Luminance enhancement by gamma_correction method...\n")
     
