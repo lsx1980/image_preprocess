@@ -28,7 +28,16 @@ import argparse
 def execute_script(cmd_line):
     """execute script inside program"""
 
-    subprocess.run(cmd_line, shell = True, capture_output=True)
+    try:
+        print(cmd_line)
+        
+        process = subprocess.Popen(cmd_line, shell = True, stdout = subprocess.PIPE)
+        
+        process.wait()
+
+    except OSError:
+        
+        print("Failed ...!\n")
 
 
 def image_prepocess(current_path):
