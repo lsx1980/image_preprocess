@@ -27,19 +27,8 @@ import argparse
 
 def execute_script(cmd_line):
     """execute script inside program"""
-    try:
-        #print(cmd_line)
-        #os.system(cmd_line)
-        
-        process = subprocess.Popen(cmd_line, shell = True, stdout = subprocess.PIPE)
-        
-        process.wait()
-        
-        #print process.returncode
-        
-    except OSError:
-        
-        print("Failed ...!\n")
+
+     process = subprocess.run(cmd_line, shell = True, stdout = subprocess.PIPE)
 
 
 def image_prepocess(current_path):
@@ -48,7 +37,7 @@ def image_prepocess(current_path):
     #/opt/code/bbox_seg.py -p /home/suxingliu/frame-interpolation/test-image/ -ft jpg
     
     # step1 : Region of Interest extraction
-    ROI_seg = "python /opt/code/bbox_seg.py -p " + current_path + " -ft " + str(ext)
+    ROI_seg = "python /opt/code/bbox_seg.py -p " + current_path + "/" + " -ft " + str(ext)
     
     print("Extracting Region of Interest from input images...\n")
     
@@ -59,11 +48,11 @@ def image_prepocess(current_path):
     #mkpath = parent_path + '/' + str('segmented')
     
     # step2 : gamma_correction 
-    #gamma_correction = "python /opt/code/gamma_correction.py -p " + parent_path + "/segmented/" 
+    gamma_correction = "python /opt/code/gamma_correction.py -p " + current_path + "/segmented/" 
     
-    #print("Luminance enhancement by gamma_correction method...\n")
+    print("Luminance enhancement by gamma_correction method...\n")
     
-    #execute_script(gamma_correction)
+    execute_script(gamma_correction)
     
 
 
