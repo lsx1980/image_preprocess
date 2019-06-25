@@ -68,16 +68,7 @@ if __name__ == '__main__':
     # setting path to model file
     file_path = args["path"]
     ext = args['filetype']
-
-    # accquire image file list
-    #filetype = '*.' + ext
-    #image_file_path = file_path + filetype
-
-    #accquire image file list
-    #imgList = sorted(glob.glob(file_path + filetype))
-
-    #print((imgList))
-
+    
     # execute the main pipeline
     image_prepocess(file_path)
     
